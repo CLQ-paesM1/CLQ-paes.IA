@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLQ - Geometría</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            padding: 2rem;
+        }
+        .ejercicio {
+            background: #ecf0f1;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .solucion {
+            display: none;
+            margin-top: 1rem;
+            background: #dfe6e9;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+        button {
+            background-color: #27ae60;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        button:hover {
+            background-color: #1e8449;
+        }
+    </style>
+    <script>
+        function mostrarSolucion(id) {
+            var elem = document.getElementById("solucion" + id);
+            elem.style.display = elem.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicios de Geometría</h1>
+
+    <div class="ejercicio">
+        <h2>Pregunta 1</h2>
+        <p>Un triángulo rectángulo tiene catetos de 3 cm y 4 cm. ¿Cuál es la longitud de la hipotenusa?</p>
+        <ul>
+            <li>A) 6 cm</li>
+            <li>B) 7 cm</li>
+            <li>C) 5 cm</li>
+            <li>D) 4.5 cm</li>
+        </ul>
+        <button onclick="mostrarSolucion(1)">Ver solución</button>
+        <div class="solucion" id="solucion1">
+            Se aplica el teorema de Pitágoras: √(3² + 4²) = √(9 + 16) = √25 = 5 cm. Respuesta correcta: C.
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Pregunta 2</h2>
+        <p>¿Cuál es el área de un círculo con radio 5 cm?</p>
+        <ul>
+            <li>A) 25π cm²</li>
+            <li>B) 10π cm²</li>
+            <li>C) 20π cm²</li>
+            <li>D) 5π cm²</li>
+        </ul>
+        <button onclick="mostrarSolucion(2)">Ver solución</button>
+        <div class="solucion" id="solucion2">
+            Área = πr² = π·5² = 25π cm². Respuesta correcta: A.
+        </div>
+    </div>
+
+</body>
+</html>
