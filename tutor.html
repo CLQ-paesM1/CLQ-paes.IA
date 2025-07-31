@@ -3,19 +3,21 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>CLQ - Tutor Inteligente</title>
+  <title>CLQ - Tutor IA Real</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>🤖 Tutor Inteligente de Matemática</h1>
-    <p>Escribe un problema o duda matemática y recibe una explicación paso a paso.</p>
-    <textarea id="pregunta" placeholder="Ejemplo: ¿Cómo resuelvo 2x + 3 = 11?"></textarea>
-    <button onclick="resolver()">🧠 Explicación Paso a Paso</button>
+    <h1>🤖 CLQ Tutor IA Real</h1>
+    <p>Escribe tu duda matemática y obtén una explicación paso a paso generada por inteligencia artificial.</p>
+    <label for="apikey">🔐 Tu API Key (OpenAI):</label>
+    <input type="password" id="apikey" placeholder="sk-..." />
+    <textarea id="pregunta" placeholder="Ejemplo: ¿Cómo resuelvo x² - 5x + 6 = 0?"></textarea>
+    <button onclick="consultarIA()">🧠 Preguntar a la IA</button>
     <div id="respuesta"></div>
     <br><a href="index.html">⬅️ Volver al inicio</a>
   </div>
-  <script src="tutor.js"></script>
+  <script src="tutor-ia.js"></script>
 </body>
 </html>
