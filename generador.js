@@ -42,6 +42,84 @@ const preguntas = [
     correcta: 0,
     explicacion: "Área = (base × altura) / 2 → (10×4)/2 = 20"
   }
+,{
+    enunciado: "¿Cuál es el resultado de 7 × 8?",
+    opciones: ["54", "56", "58", "64"],
+    correcta: 1,
+    explicacion: "7 × 8 = 56"
+  },
+  {
+    enunciado: "Si un ángulo recto mide 90°, ¿cuánto mide un ángulo llano?",
+    opciones: ["180°", "90°", "270°", "360°"],
+    correcta: 0,
+    explicacion: "Un ángulo llano mide 180°"
+  },
+  {
+    enunciado: "¿Cuál es la raíz cuadrada de 144?",
+    opciones: ["11", "12", "13", "14"],
+    correcta: 1,
+    explicacion: "√144 = 12"
+  },
+  {
+    enunciado: "¿Cuánto es el 10% de 250?",
+    opciones: ["20", "25", "30", "15"],
+    correcta: 1,
+    explicacion: "10% de 250 = 0.10 × 250 = 25"
+  },
+  {
+    enunciado: "¿Cuál es el área de un círculo de radio 3? (usa π = 3.14)",
+    opciones: ["28.26", "18.84", "9.42", "25.12"],
+    correcta: 0,
+    explicacion: "Área = π × r² = 3.14 × 9 = 28.26"
+  },
+  {
+    enunciado: "¿Cuál es el resultado de (5 × 3) - (6 ÷ 2)?",
+    opciones: ["13", "14", "12", "15"],
+    correcta: 0,
+    explicacion: "15 - 3 = 12"
+  },
+  {
+    enunciado: "¿Cuál es el múltiplo de 4 entre las siguientes opciones?",
+    opciones: ["13", "22", "24", "19"],
+    correcta: 2,
+    explicacion: "24 es múltiplo de 4"
+  },
+  {
+    enunciado: "¿Qué número sigue en la secuencia: 2, 4, 8, 16, ...?",
+    opciones: ["18", "20", "24", "32"],
+    correcta: 3,
+    explicacion: "Cada número se duplica → 16 × 2 = 32"
+  },
+  {
+    enunciado: "¿Qué fracción equivale a 0.75?",
+    opciones: ["3/4", "2/5", "1/2", "4/5"],
+    correcta: 0,
+    explicacion: "0.75 equivale a 3/4"
+  },
+  {
+    enunciado: "Si un rectángulo tiene base 10 y altura 2, ¿cuál es su área?",
+    opciones: ["20", "12", "15", "22"],
+    correcta: 0,
+    explicacion: "Área = base × altura = 10 × 2 = 20"
+  }
+,{
+    enunciado: "¿Cuál es el valor absoluto de -15?",
+    opciones: ["15", "-15", "0", "1"],
+    correcta: 0,
+    explicacion: "El valor absoluto de -15 es 15"
+  },
+  {
+    enunciado: "¿Cuántos lados tiene un octágono?",
+    opciones: ["6", "8", "10", "12"],
+    correcta: 1,
+    explicacion: "Un octágono tiene 8 lados"
+  },
+  {
+    enunciado: "¿Cuál es el resultado de 5²?",
+    opciones: ["10", "20", "25", "30"],
+    correcta: 2,
+    explicacion: "5² = 25"
+  }
 ];
 
 function mostrarPreguntas() {
