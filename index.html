@@ -1,49 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CLQ - Tutor IA Beta</title>
+  <title>CLQ - Plataforma Educativa PAES</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">CLQ 📘</div>
     <div class="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Ensayos</a>
-      <a href="#">Tutor IA</a>
-      <a href="#">Instrucciones</a>
+      <a href="index.html">Inicio</a>
+      <a href="tutor.html">Tutor IA</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="ensayos.html">Mini Ensayos</a>
+      <a href="instrucciones.html">Instrucciones</a>
     </div>
   </nav>
 
-  <div class="chat-container">
-    <header>
-      <h1>🤖 CLQ Tutor Inteligente</h1>
-      <p class="subtitle">Aprende Matemática PAES con inteligencia artificial</p>
-    </header>
-
-    <section class="sugerencias">
-      <p>Ejemplos sugeridos:</p>
-      <button onclick="setPregunta('¿Cómo resuelvo una ecuación de segundo grado?')">Ecuación cuadrática</button>
-      <button onclick="setPregunta('¿Qué es una función lineal?')">Función lineal</button>
-      <button onclick="setPregunta('¿Cómo uso el teorema de Pitágoras?')">Pitágoras</button>
-    </section>
-
-    <section class="chat-box" id="chat-box">
-      <div class="ia-msg system">👋 ¡Hola! Soy tu tutor inteligente. Pregúntame cualquier cosa de matemática PAES.</div>
-    </section>
-
-    <div class="input-panel">
-      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
-      <button onclick="enviarMensaje()">Enviar</button>
+  <main class="home">
+    <h1>Bienvenido a CLQ</h1>
+    <p>Prepárate para la PAES de Matemática con inteligencia, motivación y claridad.</p>
+    <div class="cards">
+      <a class="card" href="tutor.html">🤖 Tutor IA</a>
+      <a class="card" href="simulador.html">🧠 Simulador PAES</a>
+      <a class="card" href="ensayos.html">📘 Mini Ensayos</a>
+      <a class="card" href="instrucciones.html">ℹ️ Instrucciones</a>
     </div>
+  </main>
 
-    <footer>
-      <small>CLQ © 2025 | Esta es una beta educativa. ¡Estás construyendo tu futuro con nosotros!</small>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    <small>CLQ © 2025 - Beta educativa desarrollada con propósito</small>
+  </footer>
 </body>
 </html>

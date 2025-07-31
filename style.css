@@ -1,111 +1,58 @@
+
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f4f6fc;
+  margin: 0;
+  padding: 0;
   color: #333;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #324ab2;
-  color: white;
   padding: 0.8rem 1.5rem;
+  color: white;
 }
 .logo {
-  font-weight: bold;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .nav-links a {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
-  font-size: 0.95rem;
 }
-.chat-container {
-  max-width: 700px;
-  margin: auto;
-  padding: 1rem;
+.home {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.cards {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
-header {
-  text-align: center;
-}
-h1 {
-  margin-bottom: 0.2rem;
-}
-.subtitle {
-  font-size: 0.95rem;
-  color: #555;
-}
-.sugerencias {
-  margin: 1rem 0;
-  text-align: center;
-}
-.sugerencias button {
-  background: #eee;
-  margin: 0.3rem;
-  border: 1px solid #ccc;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.chat-box {
-  flex-grow: 1;
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #fff;
+.card {
+  background: white;
+  margin: 1rem;
+  padding: 2rem;
   border-radius: 12px;
-  overflow-y: auto;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
-.ia-msg, .user-msg {
-  margin: 0.5rem 0;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  max-width: 85%;
-  line-height: 1.4;
-}
-.ia-msg {
-  background: #e8edfc;
-  align-self: flex-start;
-}
-.user-msg {
-  background: #d1e7dd;
-  align-self: flex-end;
-  text-align: right;
-}
-.system {
-  background: #fcefcf;
-  font-style: italic;
-}
-.input-panel {
-  display: flex;
-  margin-top: 1rem;
-}
-input[type="text"] {
-  flex-grow: 1;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px 0 0 8px;
-  font-size: 1rem;
-}
-button {
-  padding: 0.8rem 1.2rem;
-  border: none;
-  background: #4A67F6;
-  color: white;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-button:hover {
-  background: #324ab2;
+.card:hover {
+  transform: scale(1.05);
+  background: #e7ebfd;
 }
 footer {
-  margin-top: 2rem;
   text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
   font-size: 0.8rem;
-  color: #888;
+  color: #666;
 }
