@@ -109,4 +109,11 @@ function finalizarSimulador() {
 
   document.getElementById("simulador").classList.add("hidden");
   document.getElementById("resultado").classList.remove("hidden");
+
+const btnGenerarOtro = document.createElement("button");
+btnGenerarOtro.textContent = "Generar Otro Ensayo";
+btnGenerarOtro.onclick = () => location.reload();
+btnGenerarOtro.style.marginTop = "1.5rem";
+document.getElementById("resultado").appendChild(btnGenerarOtro);
+
 }
