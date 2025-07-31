@@ -2,17 +2,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Simulador PAES</title>
+  <meta charset="UTF-8">
+  <title>Simulador PAES - CLQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>📝 Simulador Ensayo PAES</h1>
-    <div id="simulador"></div>
-    <button onclick="evaluar()">✅ Evaluar</button>
-    <div id="resultado"></div>
+    <h1>🕐 Simulador PAES Matemática</h1>
+    <div id="instrucciones">
+      <p><strong>📌 Instrucciones:</strong></p>
+      <ul>
+        <li>Duración: 1 hora 30 minutos</li>
+        <li>Total de preguntas: 20</li>
+        <li>Modalidad: selección múltiple (1 correcta)</li>
+        <li>Recomendamos tener papel y lápiz, trabajar en silencio y sin interrupciones.</li>
+      </ul>
+      <button onclick="iniciarSimulador()">🚀 Iniciar Ensayo</button>
+    </div>
+    <div id="cronometro" style="display:none; position: fixed; top: 1rem; right: 1rem; font-weight: bold;"></div>
+    <div id="preguntas" style="display:none;"></div>
+    <div id="finalizar" style="display:none; margin-top: 2rem;">
+      <button onclick="finalizarSimulador()">✅ Finalizar Ensayo</button>
+    </div>
+    <div id="resumen" style="margin-top: 2rem;"></div>
     <br><a href="index.html">⬅️ Volver al inicio</a>
   </div>
   <script src="simulador.js"></script>
