@@ -1,1 +1,1 @@
-# CLQ-paesch
+# CLq
