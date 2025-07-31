@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generador de Ejercicios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Generador de Ejercicio</h1>
+    <p>Escribe el tipo de ejercicio que deseas practicar:</p>
+    <form onsubmit="generarEjercicio(); return false;">
+      <textarea id="input" placeholder="Ej: 'resolver ecuación de segundo grado'"></textarea>
+      <button type="submit">Generar</button>
+    </form>
+    <div class="output" id="output"></div>
+    <br><a href="index.html">⬅️ Volver al inicio</a>
+  </div>
+  <script>
+    function generarEjercicio() {
+      const input = document.getElementById("input").value.toLowerCase();
+      const output = document.getElementById("output");
+      if (input.includes("ecuación")) {
+        output.innerHTML = "<strong>Ejercicio:</strong> Resuelve x² - 5x + 6 = 0<br/><strong>Solución:</strong> x = 2 o x = 3";
+      } else {
+        output.innerHTML = "Ejercicio generado no disponible todavía para este tipo. Prueba con otro tema.";
+      }
+    }
+  </script>
+</body>
+</html>
