@@ -29,6 +29,18 @@ const preguntas = [
     opciones: ["20", "19", "21", "22"],
     correcta: 2,
     explicacion: "Perímetro = 5 + 7 + 8 = 20"
+  },
+  {
+    enunciado: "¿Qué valor hace verdadera la ecuación x² = 49?",
+    opciones: ["7", "6", "9", "8"],
+    correcta: 0,
+    explicacion: "x = √49 → x = 7"
+  },
+  {
+    enunciado: "¿Cuál es el área de un triángulo base 10 y altura 4?",
+    opciones: ["20", "40", "14", "12"],
+    correcta: 0,
+    explicacion: "Área = (base × altura) / 2 → (10×4)/2 = 20"
   }
 ];
 
@@ -52,9 +64,7 @@ function mostrarPreguntas() {
 function corregir() {
   let score = 0;
   const resultados = document.getElementById("resultados");
-  const soluciones = document.getElementById("soluciones");
   resultados.innerHTML = "";
-  soluciones.innerHTML = "<h2>🧠 Soluciones</h2>";
   preguntas.forEach((preg, idx) => {
     const opciones = document.getElementsByName("preg" + idx);
     let elegido = -1;
@@ -62,17 +72,22 @@ function corregir() {
       if (op.checked) elegido = parseInt(op.value);
     }
     const correcta = preg.correcta;
-    if (elegido === correcta) {
-      score++;
-    }
-    const resultadoTexto = elegido === correcta ? 
+    if (elegido === correcta) score++;
+    const resultadoTexto = elegido === correcta ?
       `✅ Pregunta ${idx + 1}: Correcta` :
       `❌ Pregunta ${idx + 1}: Incorrecta (Correcta: ${preg.opciones[correcta]})`;
-    const solucionTexto = `<p><strong>${idx + 1}.</strong> ${preg.explicacion}</p>`;
     resultados.innerHTML += `<p class="${elegido === correcta ? 'correcta' : 'incorrecta'}">${resultadoTexto}</p>`;
-    soluciones.innerHTML += solucionTexto;
   });
   resultados.innerHTML = `<h2>📊 Resultado: ${score}/${preguntas.length}</h2>` + resultados.innerHTML;
+}
+
+function mostrarSoluciones() {
+  const soluciones = document.getElementById("soluciones");
+  soluciones.style.display = "block";
+  soluciones.innerHTML = "<h2>📘 Soluciones Explicadas</h2>";
+  preguntas.forEach((preg, idx) => {
+    soluciones.innerHTML += `<p><strong>${idx + 1}.</strong> ${preg.explicacion}</p>`;
+  });
 }
 
 window.onload = mostrarPreguntas;
