@@ -1,24 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>CLQ - Plataforma PAES Matemática</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
+  <title>CLQ - Tutor IA Beta</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container center">
-    <h1>📘 Bienvenido a CLQ</h1>
-    <p class="intro">Prepárate para la PAES Matemática con tecnología y claridad.</p>
-    <div class="menu">
-      <a href="generador.html" class="card">📝 MINI ENSAYOS </a>
-      <a href="tutor.html" class="card">🤖 IA PAES</a>
-      <a href="https://www.demre.cl" target="_blank" class="card">📚 Info Oficial DEMRE</a>
+  <nav class="navbar">
+    <div class="logo">CLQ 📘</div>
+    <div class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Ensayos</a>
+      <a href="#">Tutor IA</a>
+      <a href="#">Instrucciones</a>
     </div>
+  </nav>
+
+  <div class="chat-container">
+    <header>
+      <h1>🤖 CLQ Tutor Inteligente</h1>
+      <p class="subtitle">Aprende Matemática PAES con inteligencia artificial</p>
+    </header>
+
+    <section class="sugerencias">
+      <p>Ejemplos sugeridos:</p>
+      <button onclick="setPregunta('¿Cómo resuelvo una ecuación de segundo grado?')">Ecuación cuadrática</button>
+      <button onclick="setPregunta('¿Qué es una función lineal?')">Función lineal</button>
+      <button onclick="setPregunta('¿Cómo uso el teorema de Pitágoras?')">Pitágoras</button>
+    </section>
+
+    <section class="chat-box" id="chat-box">
+      <div class="ia-msg system">👋 ¡Hola! Soy tu tutor inteligente. Pregúntame cualquier cosa de matemática PAES.</div>
+    </section>
+
+    <div class="input-panel">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
+      <button onclick="enviarMensaje()">Enviar</button>
+    </div>
+
     <footer>
-      <p>CLQ © 2025 | HECHO PARA PARA TI </p>
+      <small>CLQ © 2025 | Esta es una beta educativa. ¡Estás construyendo tu futuro con nosotros!</small>
     </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
